@@ -490,7 +490,7 @@ def optimal_stoic(reactant,product,add_info,min_int_val,max_int_val):
                         metab_detail_dict[id] = extract_det(smiles)
                 novel_mets[id] = smiles
                 try:
-                    novel_mets = parse_novel_molecule(json.loads({id:smiles}))
+                    novel_mets = parse_novel_molecule({id:smiles})
                     #st.write(novel_mets)
                     novel_smiles = parse_novel_smiles(novel_mets)
                     novel_decomposed_r1 = decompse_novel_mets_rad1(novel_smiles)
